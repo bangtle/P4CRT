@@ -12,6 +12,7 @@ Please email us any issues or suggestions.
 
 \author{
   Bang Le \email{lethbang@yahoo.com}
+
   Jessaca Spybrook \email{???}
 }
 
