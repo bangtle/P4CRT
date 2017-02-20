@@ -14,7 +14,7 @@
 #' @param randeff Existence of random site effects.
 #' @param alpha Probability of type I error.
 #' @seealso \code{\link{PowerUpR}}
-#' @examples 
+#' @examples
 #' powerMSCRT(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)
 #'
 
@@ -35,7 +35,7 @@ powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1
   else if ((numcovL2==0) & !(R2L2==0)) stop("numcovL2 = 0, so R2L2 must also be zero!")
   else if (!(randeff==TRUE)|!(randeff==T)&!(randeff==FALSE)|!(randeff==F)) stop("randeff must be either TRUE (or T) or FALSE (or F) only!")
   else if ((alpha<0)|(alpha>1)) stop("alpha must be between 0 and 1!")
-  
+
   else if ((numcovL1==0)&(numcovL2=0)&(randeff==TRUE)){ # model (6.1.1)
     num.df <- 1
     denom.df <- K-1
@@ -49,12 +49,12 @@ powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1
   else if ((numcovL1==0)&!(numcovL2=0)&(randeff==TRUE)){ # model (6.1.3)
     num.df <- 1
     denom.df <- K-1-numcovL2
-    lambda <- K*delta^2/(sigmad^2+4*((1-R2L2)*rhoL2+(1-rhoL3-rhoL2)/n)/J)   
+    lambda <- K*delta^2/(sigmad^2+4*((1-R2L2)*rhoL2+(1-rhoL3-rhoL2)/n)/J)
   }
   else if (!(numcovL1==0)&!(numcovL2=0)&(randeff==TRUE)){ # model (6.1.4)
     num.df <- 1
     denom.df <- K-1-numcovL2
-    lambda <- K*delta^2/(sigmad^2+4*((1-R2L2)*rhoL2+(1-R2L1)*(1-rhoL3-rhoL2)/n)/J)   
+    lambda <- K*delta^2/(sigmad^2+4*((1-R2L2)*rhoL2+(1-R2L1)*(1-rhoL3-rhoL2)/n)/J)
   }
   else if ((numcovL1==0)&(numcovL2=0)&(randeff==FALSE)){ # model (6.2.1)
     num.df <- 1
@@ -65,20 +65,21 @@ powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1
     num.df <- 1
     denom.df <- K-1
     lambda <- K*delta^2/(4*(rhoL2+(1-R2L1)*(1-rhoL3-rhoL2)/n)/J)
+  }
   else if ((numcovL1==0)&!(numcovL2=0)&(randeff==FALSE)){ # model (6.2.3)
     num.df <- 1
     denom.df <- K-1-numcovL2
-    lambda <- K*J*delta^2/(4*((1-R2L2)*rhoL2+(1-rhoL3-rhoL2)/n)/J)   
+    lambda <- K*J*delta^2/(4*((1-R2L2)*rhoL2+(1-rhoL3-rhoL2)/n)/J)
   }
   else if (!(numcovL1==0)&!(numcovL2=0)&(randeff==FALSE)){ # model (6.2.4)
     num.df <- 1
     denom.df <- K-1-numcovL2
-    lambda <- K*J*delta^2/(4*((1-R2L2)*rhoL2+(1-R2L1)*(1-rhoL3-rhoL2)/n)/J)   
+    lambda <- K*J*delta^2/(4*((1-R2L2)*rhoL2+(1-R2L1)*(1-rhoL3-rhoL2)/n)/J)
       }
   else stop("Unrecognized model. Please specify a valid model!")
-  
+
   power <- 1-pf(qf(1-alpha,num.df,denom.df),num.df,denom.df,lambda)
-  
+
   result <- data.frame(n,J,delta,sigmad,rhoL2,numcovL1,R2L1,randeff,alpha,power)
   return(result)
 }
