@@ -46,6 +46,7 @@ This function returns the power for two-level cluster randomized trials designs 
 \examples{
 # All arguments are specified
 power2L(n=100,J=40,delta=0.2,rhoL2=0.3,numcovL1=1,numcovL2=0,R2L1=0.2,R2L2=0,modL1=TRUE,modL2=FALSE,alpha=0.05)
+
 # Unspecified arguments take their default values
 power2L(n=100,J=40,delta=0.2,rhoL2=0.3)
 }
