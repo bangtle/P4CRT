@@ -1,8 +1,13 @@
 #' @title power2L
 #' @description This function returns the power for a two-level cluster randomized trials designs.
 #' This function can address the following models:
-#' \section{Two-level with no covariate}
-#' \section{two-level with covariate(s) at level 1}
+#' \enumerate{
+#' \item Two-level with no covariate
+#' \item Two-level with covariate(s) at level 1
+#' }
+#' \itemize{
+#' \item Two-level with covariate(s) at level 1 and level 2
+#' }
 #' \subsection{Two-level with covariate(s) at level 2}
 #' @param n Number of units in level 1 (individual level).
 #' @param J Number of units in level 2 (cluster level)
