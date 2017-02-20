@@ -1,69 +1,18 @@
 \name{introduction}
-\alias{Power4CRT}
-\title{Introduction to \code{Power4CRT}}
+\alias{P4CRT}
+\title{Introduction to \code{P4CRT}}
 \description{
-  \code{Power4CRT} is an implementation of \emph{PowerUp!} in R environment (R Core Team, 2016). \emph{PowerUp!} is a statistical power analysis tool
-  to calculate minimum detectable effect size (MDES) and top level minimum required sample size (MRSS)
-  for various experimental and quasi-experimental designs including cluster randomized trials (Dong & Maynard, 2013).
-  \code{PowerUpR} package, however, solely focuses on cluster randomized trials and adds several additional features.
-  The package bases its framework on three fundemental concepts in statistical power analysis; MDES calculation,
-  sample size calculation, and power calculation. Congruent with this framework, \code{PowerUpR} additionally provides
-  tools to calculate statistical power, MRSS for any level, and to solve constrained optimal sample allocation
-  (COSA; Hedges & Borenstein, 2014; Raudenbush, 1997; Raudenbush & Liu, 2000) problems.
-  COSA problems can be solved in the following forms, (i) under budgetary constraints given marginal costs per unit,
-  (ii) under power constraints given marginal costs per unit,
-  (iii) under MDES constraints given marginal costs per unit, and
-  (iv) under sample size constraints for one or more levels along with any of the i, ii or iii options.
-  Congruent with the three fundemental concepts the package also provides tools for graphing two and three dimensional relationships
-  to investiage relative standing of design parameter under investigation.
+  \code{P4CRT} is ....
 
-A design parameter (one of the MDES, MRSS, power, or COSA) can be requested by using approriate function given design characteristics.
-Except for graphing functions, each function begins with an \strong{output} name, following by a period, and a \strong{design} name.
-There are four types of output; \code{mdes},  \code{power}, \code{mrss}, and \code{optimal}, and 14 types of design; \code{ira1r1},
-\code{bira2r1}, \code{bira2f1}, \code{bira2c1}, \code{cra2r2}, \code{bira3r1}, \code{bcra3r2}, \code{bcra3f2}, \code{cra3r3},
-\code{bira4r1}, \code{bcra4r2}, \code{bcra4r3}, \code{bcra4f3}, and \code{cra4r4}. The first three letters of the design stands
-for the type of assignment, for individual random assignment \code{ira}, for blocked individual random assignment \code{bira},
-for cluster random assignment \code{cra}, and for blocked cluster random assignment \code{bcra}.
-It is followed by a number indicating number of levels. A single letter followed by a number indicates whether a block is considered
-to be \code{r}, random; \code{f}, fixed; or \code{c}, constant and the level at which random assingment takes place.
-So, to find MDES for 2-level cluster randomized blocked (random) design where random assignment is at level 1, function \code{mdes.cra2r1} is used.
 
-Each function requires slightly different arguments depending on the output it produces and the design. Most of the arguments have default values to provide users a starting point. For all functions default values are
-\itemize{
-  \item{\code{mdes} = .25}
-  \item{\code{power} (\eqn{1-\beta}) = .80}
-  \item{\code{alpha} (\eqn{\alpha}) = .05}
-  \item{\code{two.tail} = \code{TRUE}}
-  \item{\code{P} = .50}
-}
-and depending on the design
-\itemize{
-  \item{any of one of \code{g1, g2, g3, g4} = 0}
-  \item{any sequence of \code{R12, R22, R32, R42} = 0}
-  \item{any sequence of \code{RT22, RT32, RT42} = 0}
-}
-Users should be aware of default values and change them if necessary. Depending on the function minimum required arguments are
-\itemize{
-  \item{any sequence of \code{rho2, rho3, rho4}}
-  \item{any sequence of \code{omega2, omega3, omega4}}
-  \item{any one of, any sequence of, or any combination of \code{n, J, K, L}}
-}
-For definition of above-mentioned parameters see Dong & Maynard (2013) and Hedges & Rhoads (2009),
-or help files for individual functions. For reference intraclass correlation (\code{rho2, rho3})
-values see Dong, Reinke, Herman, Bradshaw, and Murray (2016), Hedberg and Hedges (2014), Hedges and Hedberg (2007, 2013), Kelcey, and Phelps (2013), Schochet (2008), Spybrook, Westine, and Taylor (2016).
-
-For reference variance (\code{R12, R22, R32}) values see Bloom, Richburg-Hayes, and Black (2007), Deke et al. (2010), Dong et al. (2016), Hedges and Hedberg (2013), Kelcey, and Phelps (2013), Spybrook, Westine,and Taylor (2016), Westine, Spybrook, and Taylor (2013).
-Users can also obtain design parameters for various levels using publicly available state or district data.
-
-Click for the \href{http://rpubs.com/metinbulus/powerupr_vignettes}{vignettes} demonstrating how to use \code{PowerUpR} package.
 
 Please email us any issues or suggestions.
 
 }
 
 \author{
-  Metin Bulus \email{bulus.metin@gmail.com}
-  Nianbo Dong \email{dong.nianbo@gmail.com}
+  Bang Le \email{lethbang@yahoo.com}
+  Jessaca Spybrook \email{???}
 }
 
 \references{
