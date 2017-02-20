@@ -30,8 +30,10 @@ powerMS(n, J, delta, sigmad, rhoL2, numcovL1 = 0, R2L1 = 0,
 This function returns the power for a multi-site (blocked) trials designs.
 }
 \examples{
-powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=0,R2L1=0,randeff=TRUE,alpha=0.05)
-
+# All arguments are specified
+powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=1,R2L1=0.2,randeff=FALSE,alpha=0.05)
+# Some arguments take default values
+powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3)
 }
 \seealso{
 \code{\link{PowerUpR}}

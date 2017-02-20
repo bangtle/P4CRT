@@ -38,8 +38,10 @@ powerMSCRT(n, J, K, delta, sigmad, rhoL2, rhoL3, numcovL1 = 0, numcovL2 = 0,
 This function returns the power for a multi-site cluster randomized trials designs with treatment at level 2.
 }
 \examples{
-powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)
-
+# All arguments are specified
+powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,R2L1=0.2,R2L2=0.30,randeff=TRUE,alpha=0.05)
+# Some arguments take default values
+powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2)
 }
 \seealso{
 \code{\link{PowerUpR}}

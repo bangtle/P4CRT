@@ -11,8 +11,10 @@
 #' @param alpha Probability of type I error.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
-#' powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=0,R2L1=0,randeff=TRUE,alpha=0.05)
-#'
+#' # All arguments are specified
+#' powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=1,R2L1=0.2,randeff=FALSE,alpha=0.05)
+#' # Some arguments take default values
+#' powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3)
 
 powerMS <- function(n,J,delta,sigmad,rhoL2,numcovL1=0,R2L1=0,randeff=TRUE,alpha=0.05)
 {
@@ -24,7 +26,6 @@ powerMS <- function(n,J,delta,sigmad,rhoL2,numcovL1=0,R2L1=0,randeff=TRUE,alpha=
   else if ((R2L1<0)|(R2L1>=1)) stop("L1 R-squared must be positive and less than 1!")
   else if ((numcovL1<0)|!(numcovL1%%1==0)) stop("number of level-1 covariate(s) must be a nonnegative integer!")
   else if ((numcovL1==0) & !(R2L1==0)) stop("numcovL1 = 0, so R2L1 must also be zero!")
-  #else if (!(randeff==TRUE)|!(randeff==T)&!(randeff==FALSE)|!(randeff==F)) stop("randeff can be either TRUE (or T) or FALSE (or F) only!")
   else if ((alpha<0)|(alpha>1)) stop("alpha must be between 0 and 1!")
 
   else if ((numcovL1==0)&(randeff==FALSE)){ # model (5.1.1)
