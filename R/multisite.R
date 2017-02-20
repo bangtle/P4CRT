@@ -7,13 +7,13 @@
 #' @param rhoL2 Intraclass correlation (ICC) at level 2.
 #' @param numcovL1 Number of covariate(s) at level 1.
 #' @param R2L1 R-squared at level 1.
-#' @param randeff Existence of random site effects.
+#' @param randeff Random site effects is assumed.
 #' @param alpha Probability of type I error.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
 #' # All arguments are specified
 #' powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=1,R2L1=0.2,randeff=FALSE,alpha=0.05)
-#' # Some arguments take default values
+#' # Unspecified arguments take default values
 #' powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3)
 
 powerMS <- function(n,J,delta,sigmad,rhoL2,numcovL1=0,R2L1=0,randeff=TRUE,alpha=0.05)

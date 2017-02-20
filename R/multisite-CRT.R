@@ -11,13 +11,13 @@
 #' @param numcovL2 Number of covariate(s) at level 2.
 #' @param R2L1 R-squared at level 1.
 #' @param R2L2 R-squared at level 2.
-#' @param randeff Existence of random site effects.
+#' @param randeff Random site effects is assumed.
 #' @param alpha Probability of type I error.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
 #' # All arguments are specified
 #' powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,R2L1=0.2,R2L2=0.30,randeff=TRUE,alpha=0.05)
-#' # Some arguments take default values
+#' # Unspecified arguments take default values
 #' powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2)
 
 powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)

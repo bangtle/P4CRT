@@ -30,7 +30,7 @@ powerMSCRT(n, J, K, delta, sigmad, rhoL2, rhoL3, numcovL1 = 0, numcovL2 = 0,
 
 \item{R2L2}{R-squared at level 2.}
 
-\item{randeff}{Existence of random site effects.}
+\item{randeff}{Random site effects is assumed.}
 
 \item{alpha}{Probability of type I error.}
 }
@@ -40,7 +40,7 @@ This function returns the power for a multi-site cluster randomized trials desig
 \examples{
 # All arguments are specified
 powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,R2L1=0.2,R2L2=0.30,randeff=TRUE,alpha=0.05)
-# Some arguments take default values
+# Unspecified arguments take default values
 powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2)
 }
 \seealso{
