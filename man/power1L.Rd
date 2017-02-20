@@ -11,11 +11,11 @@ power1L(n, delta, numcovL1 = 0, R2L1 = 0, alpha = 0.05)
 
 \item{delta}{Standardized effect size.}
 
-\item{numcovL1}{Number of covariate(s) at level 1.}
+\item{numcovL1}{Number of covariate(s) at level 1. Default value is \code{0}.}
 
-\item{R2L1}{R-squared at level 1.}
+\item{R2L1}{R-squared at level 1. Default value is \code{0}.}
 
-\item{alpha}{Probability of type I error.}
+\item{alpha}{Probability of type I error. Default value is \code{0.05}.}
 }
 \description{
 This function returns the power for a single-level randomized trials designs.
@@ -24,7 +24,7 @@ This function returns the power for a single-level randomized trials designs.
 # All arguments are specified
 power1L(n=100,delta=0.2,numcovL1=1,R2L1=0.2,alpha=0.05)
 
-# Unspecified arguments take default values
+# Unspecified arguments take their default values
 power1L(n=100,delta=0.2)
 }
 \seealso{

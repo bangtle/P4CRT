@@ -2,16 +2,16 @@
 #' @description This function returns the power for a single-level randomized trials designs.
 #' @param n Number of subjects in level 1 (individual level).
 #' @param delta Standardized effect size.
-#' @param numcovL1 Number of covariate(s) at level 1.
-#' @param R2L1 R-squared at level 1.
-#' @param alpha Probability of type I error.
+#' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.
+#' @param R2L1 R-squared at level 1. Default value is \code{0}.
+#' @param alpha Probability of type I error. Default value is \code{0.05}.
 #' @seealso \code{\link{PowerUpR}}
 #' @return NULL
 #' @examples
 #' # All arguments are specified
 #' power1L(n=100,delta=0.2,numcovL1=1,R2L1=0.2,alpha=0.05)
 #'
-#' # Unspecified arguments take default values
+#' # Unspecified arguments take their default values
 #' power1L(n=100,delta=0.2)
 
 

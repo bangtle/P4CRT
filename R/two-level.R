@@ -1,20 +1,26 @@
 #' @title power2L
 #' @description This function returns the power for a two-level cluster randomized trials designs.
+#' This function can address the following models:
+#' \section{Two-level with no covariate}
+#' \section{two-level with covariate(s) at level 1}
+#' \subsection{Two-level with covariate(s) at level 2}
 #' @param n Number of units in level 1 (individual level).
 #' @param J Number of units in level 2 (cluster level)
 #' @param delta Standardized effect size.
 #' @param rhoL2 Intraclass correlation (ICC) at level 2.
-#' @param numcovL1 Number of covariate(s) at level 1.
-#' @param numcovL2 Number of covariate(s) at level 2.
-#' @param R2L1 R-squared at level 1.
-#' @param R2L2 R-squared at level 2.
-#' @param modL1 Existence of moderator at level 1.
-#' @param modL2 Existence of moderator at level 2.
-#' @param alpha Probability of type I error.
+#' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.
+#' @param numcovL2 Number of covariate(s) at level 2. Default value is \code{0}.
+#' @param R2L1 R-squared at level 1. Default value is \code{0}.
+#' @param R2L2 R-squared at level 2. Default value is \code{0}.
+#' @param modL1 Existence of moderator at level 1. Default value is \code{FALSE}.
+#' @param modL2 Existence of moderator at level 2. Default value is \code{FALSE}.
+#' @param alpha Probability of type I error. Default value is \code{0.05}.
 #' @seealso \code{\link{PowerUpR}}
-#' @examples 
+#' @examples
+#' # All arguments are specified
 #' power2L(n=100,J=40,delta=0.2,rhoL2=0.3,numcovL1=1,numcovL2=0,R2L1=0.2,R2L2=0,modL1=TRUE,modL2=FALSE,alpha=0.05)
 
+# Unspecified arguments take their default values
 
 
 power2L <- function(n,J,delta,rhoL2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,modL1=FALSE,modL2=FALSE,alpha=0.05){

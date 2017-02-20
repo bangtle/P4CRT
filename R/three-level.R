@@ -6,23 +6,23 @@
 #' @param delta Standardized effect size.
 #' @param rhoL2 Intraclass correlation (ICC) at level 2.
 #' @param rhoL3 Intraclass correlation (ICC) at level 3.
-#' @param numcovL1 Number of covariate(s) at level 1.
-#' @param numcovL2 Number of covariate(s) at level 2.
-#' @param numcovL3 Number of covariate(s) at level 3.
-#' @param R2L1 R-squared at level 1.
-#' @param R2L2 R-squared at level 2.
-#' @param R2L3 R-squared at level 3.
-#' @param modL1 Existence of moderator at level 1.
-#' @param modL2 Existence of moderator at level 2.
-#' @param modL3 Existence of moderator at level 3.
-#' @param alpha Probability of type I error.
+#' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.
+#' @param numcovL2 Number of covariate(s) at level 2. Default value is \code{0}.
+#' @param numcovL3 Number of covariate(s) at level 3. Default value is \code{0}.
+#' @param R2L1 R-squared at level 1. Default value is \code{0}.
+#' @param R2L2 R-squared at level 2. Default value is \code{0}.
+#' @param R2L3 R-squared at level 3. Default value is \code{0}.
+#' @param modL1 Existence of moderator at level 1. Default value is \code{FALSE}.
+#' @param modL2 Existence of moderator at level 2. Default value is \code{FALSE}.
+#' @param modL3 Existence of moderator at level 3. Default value is \code{FALSE}.
+#' @param alpha Probability of type I error. Default value is \code{0.05}.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
 #' # All arguments are specified
-#' power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,numcovL3=0,R2L1=0,R2L2=0,modL1=FALSE,modL2=FALSE,modL3=FALSE,alpha=0.05)
+#' power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,numcovL3=1,R2L1=0.2,R2L2=0.2,modL1=FALSE,modL2=FALSE,modL3=FALSE,alpha=0.05)
 #'
-#'# Unspecified arguments take default values
-#'power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2)
+#'# Unspecified arguments take their default values
+#' power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2)
 
 
 power3L <- function(n,J,K,delta,rhoL2,rhoL3,numcovL1=0,numcovL2=0,numcovL3=0,R2L1=0,R2L2=0,R2L3=0,modL1=FALSE,modL2=FALSE,modL3=FALSE,alpha=0.05){

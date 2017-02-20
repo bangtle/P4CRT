@@ -41,7 +41,7 @@ This function returns the power for a multi-site cluster randomized trials desig
 # All arguments are specified
 powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,R2L1=0.2,R2L2=0.30,randeff=TRUE,alpha=0.05)
 
-# Unspecified arguments take default values
+# Unspecified arguments take their default values
 powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2)
 }
 \seealso{
