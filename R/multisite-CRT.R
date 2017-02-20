@@ -15,7 +15,7 @@
 #' @param alpha Probability of type I error.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
-#' powerMSCRT(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)
+#' powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)
 #'
 
 powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,randeff=TRUE,alpha=0.05)
@@ -33,7 +33,7 @@ powerMSCRT <- function(n,J,K,delta,sigmad,rhoL2,rhoL3,numcovL1=0,numcovL2=0,R2L1
   else if ((R2L2<0)|(R2L2>=1)) stop("L2 R-squared must be positive and less than 1!")
   else if ((numcovL2<0)|!(numcovL2%%1==0)) stop("number of level-2 covariate(s) must be a nonnegative integer!")
   else if ((numcovL2==0) & !(R2L2==0)) stop("numcovL2 = 0, so R2L2 must also be zero!")
-  else if (!(randeff==TRUE)|!(randeff==T)&!(randeff==FALSE)|!(randeff==F)) stop("randeff must be either TRUE (or T) or FALSE (or F) only!")
+  else if (!((randeff==TRUE)|(randeff==T)&(randeff==FALSE)|(randeff==F))) stop("randeff must be either TRUE (or T) or FALSE (or F) only!")
   else if ((alpha<0)|(alpha>1)) stop("alpha must be between 0 and 1!")
 
   else if ((numcovL1==0)&(numcovL2=0)&(randeff==TRUE)){ # model (6.1.1)
