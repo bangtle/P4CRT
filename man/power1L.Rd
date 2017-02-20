@@ -21,7 +21,11 @@ power1L(n, delta, numcovL1 = 0, R2L1 = 0, alpha = 0.05)
 This function returns the power for a single-level randomized trials designs.
 }
 \examples{
+# All arguments are specified
 power1L(n=100,delta=0.2,numcovL1=1,R2L1=0.2,alpha=0.05)
+
+# Unspecified arguments take default values
+power1L(n=100,delta=0.2)
 }
 \seealso{
 \code{\link{PowerUpR}}

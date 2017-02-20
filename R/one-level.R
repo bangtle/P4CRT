@@ -8,8 +8,11 @@
 #' @seealso \code{\link{PowerUpR}}
 #' @return NULL
 #' @examples
+#' # All arguments are specified
 #' power1L(n=100,delta=0.2,numcovL1=1,R2L1=0.2,alpha=0.05)
-
+#'
+#' # Unspecified arguments take default values
+#' power1L(n=100,delta=0.2)
 
 
 

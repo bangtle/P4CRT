@@ -7,16 +7,17 @@
 #' @param sigmad Variance in treatment effects across sites.
 #' @param rhoL2 Intraclass correlation (ICC) at level 2.
 #' @param rhoL3 Intraclass correlation (ICC) at level 3.
-#' @param numcovL1 Number of covariate(s) at level 1.
-#' @param numcovL2 Number of covariate(s) at level 2.
-#' @param R2L1 R-squared at level 1.
-#' @param R2L2 R-squared at level 2.
-#' @param randeff Random site effects is assumed.
-#' @param alpha Probability of type I error.
+#' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.
+#' @param numcovL2 Number of covariate(s) at level 2. Default value is \code{0}.
+#' @param R2L1 R-squared at level 1. Default value is \code{0}.
+#' @param R2L2 R-squared at level 2. Default value is \code{0}.
+#' @param randeff Random site effects. Default value is \code{FALSE}.
+#' @param alpha Probability of type I error. Default value is \code{0.05}.
 #' @seealso \code{\link{PowerUpR}}
 #' @examples
 #' # All arguments are specified
 #' powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=1,numcovL2=1,R2L1=0.2,R2L2=0.30,randeff=TRUE,alpha=0.05)
+#'
 #' # Unspecified arguments take default values
 #' powerMSCRT(n=100,J=40,K=40,delta=0.2,sigmad=0.2,rhoL2=0.3,rhoL3=0.2)
 

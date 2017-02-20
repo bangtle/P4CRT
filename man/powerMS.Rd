@@ -32,6 +32,7 @@ This function returns the power for a multi-site (blocked) trials designs.
 \examples{
 # All arguments are specified
 powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3,numcovL1=1,R2L1=0.2,randeff=FALSE,alpha=0.05)
+
 # Unspecified arguments take default values
 powerMS(n=100,J=40,delta=0.2,sigmad=0.2,rhoL2=0.3)
 }

@@ -45,8 +45,11 @@ power3L(n, J, K, delta, rhoL2, rhoL3, numcovL1 = 0, numcovL2 = 0,
 This function returns the power for a three-level cluster randomized trials designs.
 }
 \examples{
+# All arguments are specified
 power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2,numcovL1=0,numcovL2=0,numcovL3=0,R2L1=0,R2L2=0,modL1=FALSE,modL2=FALSE,modL3=FALSE,alpha=0.05)
 
+# Unspecified arguments take default values
+power3L(n=100,J=40,K=40,delta=0.2,rhoL2=0.3,rhoL3=0.2)
 }
 \seealso{
 \code{\link{PowerUpR}}
