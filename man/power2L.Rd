@@ -10,7 +10,7 @@ power2L(n, J, delta, rhoL2, numcovL1 = 0, numcovL2 = 0, R2L1 = 0,
 \arguments{
 \item{n}{Number of units in level 1 (individual level).}
 
-\item{J}{Number of units in level 2 (cluster level)}
+\item{J}{Number of units in level 2 (cluster level).}
 
 \item{delta}{Standardized effect size.}
 
@@ -31,15 +31,23 @@ power2L(n, J, delta, rhoL2, numcovL1 = 0, numcovL2 = 0, R2L1 = 0,
 \item{alpha}{Probability of type I error. Default value is \code{0.05}.}
 }
 \description{
-This function returns the power for a two-level cluster randomized trials designs.
-This function can address the following models:
-\section{Two-level with no covariate}
-\section{two-level with covariate(s) at level 1}
-\subsection{Two-level with covariate(s) at level 2}
+This function returns the power for two-level cluster randomized trials designs with treatment at level 2 (cluster level). It addresses the following models:
+\itemize{
+\item Main treatment effects with no additional covariates.
+\item Main treatment effects with covariate(s) at level 1 only.
+\item Main treatment effects with covariate(s) at level 2 only.
+\item Main treatment effects with covariate(s) at levels 1 and 2.
+\item Cluster-level moderator effects with no additional covariates.
+\item Cluster-level moderator effects with covariate(s) at level 2 only.
+\item Individual-level moderator effects with no additional covariates.
+\item Individual-level moderator effects with covariate(s) at level 1 only.
+}
 }
 \examples{
 # All arguments are specified
 power2L(n=100,J=40,delta=0.2,rhoL2=0.3,numcovL1=1,numcovL2=0,R2L1=0.2,R2L2=0,modL1=TRUE,modL2=FALSE,alpha=0.05)
+# Unspecified arguments take their default values
+power2L(n=100,J=40,delta=0.2,rhoL2=0.3)
 }
 \seealso{
 \code{\link{PowerUpR}}

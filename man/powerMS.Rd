@@ -27,7 +27,13 @@ powerMS(n, J, delta, sigmad, rhoL2, numcovL1 = 0, R2L1 = 0,
 \item{alpha}{Probability of type I error. Default value is \code{0.05}.}
 }
 \description{
-This function returns the power for a multi-site (blocked) trials designs.
+This function returns the power for multi-site (blocked) trials designs with treatment at level 2 (site level). It addresses the following models:
+\itemize{
+\item Main treatment effects (assuming random site effects) with no additional covariates.
+\item Main treatment effects (assuming random site effects) with covariate(s) at level 1.
+\item Main treatment effects (assuming fixed site effects) with no additional covariates.
+\item Main treatment effects (assuming fixed site effects) with covariate(s) at level 1.
+}
 }
 \examples{
 # All arguments are specified

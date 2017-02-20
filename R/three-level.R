@@ -1,5 +1,18 @@
 #' @title power3L
-#' @description This function returns the power for a three-level cluster randomized trials designs.
+#' @description This function returns the power for three-level cluster randomized trials designs with treatment at level 3 (cluster level). It addresses the following models:
+#' \itemize{
+#' \item Main treatment effects with no additional covariates.
+#' \item Main treatment effects with covariate(s) at level 1 only.
+#' \item Main treatment effects with covariate(s) at level 2 only.
+#' \item Main treatment effects with covariate(s) at level 3 only.
+#' \item Main treatment effects with covariate(s) at levels 1, 2, and 3.
+#' \item Cluster-level moderator effects with no additional covariates.
+#' \item Cluster-level moderator effects with covariate(s) at level 3 only.
+#' \item Sub-cluster-level moderator effects with no additional covariates.
+#' \item Sub-cluster-level moderator effects with covariate(s) at level 2 only.
+#' \item Individual-level moderator effects with no additional covariates.
+#' \item Individual-level moderator effects with covariate(s) at level 1 only.
+#' }
 #' @param n Number of subjects in level 1 (individual level).
 #' @param J Number of units in level 2 (subcluster level).
 #' @param K Number of units in level 3 (cluster level).

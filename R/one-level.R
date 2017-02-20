@@ -1,5 +1,9 @@
 #' @title power1L
-#' @description This function returns the power for a single-level randomized trials designs.
+#' @description This function returns the power for single-level randomized trials designs. It addresses the following models:
+#' \itemize{
+#' \item Main treatment effects, with no additional covariates.
+#' \item Main treatment effects, with covariate(s) at level 1.
+#' }
 #' @param n Number of subjects in level 1 (individual level).
 #' @param delta Standardized effect size.
 #' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.

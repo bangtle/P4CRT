@@ -35,7 +35,17 @@ powerMSCRT(n, J, K, delta, sigmad, rhoL2, rhoL3, numcovL1 = 0, numcovL2 = 0,
 \item{alpha}{Probability of type I error. Default value is \code{0.05}.}
 }
 \description{
-This function returns the power for a multi-site cluster randomized trials designs with treatment at level 2.
+This function returns the power for multi-site cluster randomized trials designs with treatment at level 2 (cluster level). It addresses the following models:
+\itemize{
+\item Main treatment effects (assuming random site effects) with no additional covariates.
+\item Main treatment effects (assuming random site effects) with covariate(s) at level 1 only.
+\item Main treatment effects (assuming random site effects) with covariate(s) at level 2 only.
+\item Main treatment effects (assuming random site effects) with covariate(s) at levels 1 and 2.
+\item Main treatment effects (assuming fixed site effects) with no additional covariates.
+\item Main treatment effects (assuming fixed site effects) with covariate(s) at level 1 only.
+\item Main treatment effects (assuming fixed site effects) with covariate(s) at level 2 only.
+\item Main treatment effects (assuming fixed site effects) with covariate(s) at levels 1 and 2.
+}
 }
 \examples{
 # All arguments are specified

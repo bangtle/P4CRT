@@ -1,5 +1,11 @@
 #' @title powerMS
-#' @description This function returns the power for a multi-site (blocked) trials designs.
+#' @description This function returns the power for multi-site (blocked) trials designs with treatment at level 2 (site level). It addresses the following models:
+#' \itemize{
+#' \item Main treatment effects (assuming random site effects) with no additional covariates.
+#' \item Main treatment effects (assuming random site effects) with covariate(s) at level 1.
+#' \item Main treatment effects (assuming fixed site effects) with no additional covariates.
+#' \item Main treatment effects (assuming fixed site effects) with covariate(s) at level 1.
+#' }
 #' @param n Number of subjects in level 1 (individual level).
 #' @param J Number of units in level 2 (site level).
 #' @param delta Standardized effect size.

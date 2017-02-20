@@ -1,16 +1,18 @@
 #' @title power2L
-#' @description This function returns the power for a two-level cluster randomized trials designs.
-#' This function can address the following models:
-#' \enumerate{
-#' \item Two-level with no covariate
-#' \item Two-level with covariate(s) at level 1
-#' }
+#' @description This function returns the power for two-level cluster randomized trials designs with treatment at level 2 (cluster level). It addresses the following models:
 #' \itemize{
-#' \item Two-level with covariate(s) at level 1 and level 2
+#' \item Main treatment effects with no additional covariates.
+#' \item Main treatment effects with covariate(s) at level 1 only.
+#' \item Main treatment effects with covariate(s) at level 2 only.
+#' \item Main treatment effects with covariate(s) at levels 1 and 2.
+#' \item Cluster-level moderator effects with no additional covariates.
+#' \item Cluster-level moderator effects with covariate(s) at level 2 only.
+#' \item Individual-level moderator effects with no additional covariates.
+#' \item Individual-level moderator effects with covariate(s) at level 1 only.
 #' }
-#' \subsection{Two-level with covariate(s) at level 2}
+
 #' @param n Number of units in level 1 (individual level).
-#' @param J Number of units in level 2 (cluster level)
+#' @param J Number of units in level 2 (cluster level).
 #' @param delta Standardized effect size.
 #' @param rhoL2 Intraclass correlation (ICC) at level 2.
 #' @param numcovL1 Number of covariate(s) at level 1. Default value is \code{0}.
@@ -25,8 +27,8 @@
 #' # All arguments are specified
 #' power2L(n=100,J=40,delta=0.2,rhoL2=0.3,numcovL1=1,numcovL2=0,R2L1=0.2,R2L2=0,modL1=TRUE,modL2=FALSE,alpha=0.05)
 
-# Unspecified arguments take their default values
-
+#' # Unspecified arguments take their default values
+#' power2L(n=100,J=40,delta=0.2,rhoL2=0.3)
 
 power2L <- function(n,J,delta,rhoL2,numcovL1=0,numcovL2=0,R2L1=0,R2L2=0,modL1=FALSE,modL2=FALSE,alpha=0.05){
 

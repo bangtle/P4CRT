@@ -18,7 +18,11 @@ power1L(n, delta, numcovL1 = 0, R2L1 = 0, alpha = 0.05)
 \item{alpha}{Probability of type I error. Default value is \code{0.05}.}
 }
 \description{
-This function returns the power for a single-level randomized trials designs.
+This function returns the power for single-level randomized trials designs. It addresses the following models:
+\itemize{
+\item Main treatment effects, with no additional covariates.
+\item Main treatment effects, with covariate(s) at level 1.
+}
 }
 \examples{
 # All arguments are specified
